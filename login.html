@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Student Login | Academic Portal</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div class="auth-container">
+  <div class="auth-card">
+
+    <h2>Student Login</h2>
+    <p class="subtitle">Academic Course Portal</p>
+
+    <div class="auth-warning">
+      Demo login for academic showcase only.  
+      Backend authentication will be added later.
+    </div>
+
+    <form onsubmit="login(event)">
+      <input type="email" id="email" placeholder="University Email" required>
+      <input type="password" id="password" placeholder="Password" required>
+      <button class="btn">Login</button>
+    </form>
+
+    <div class="auth-footer">
+      Don’t have an account? <a href="signup.html">Create one</a>
+    </div>
+
+  </div>
+</div>
+
+<script src="js/auth.js"></script>
+</body>
+</html>

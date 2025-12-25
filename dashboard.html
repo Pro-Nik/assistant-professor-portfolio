@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Student Dashboard</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body onload="loadUser()">
+
+<div class="dashboard">
+  <aside>
+    <h3>Dashboard</h3>
+    <a href="course.html">Courses</a>
+    <a href="#" onclick="logout()">Logout</a>
+  </aside>
+
+  <main>
+  <h2 id="welcome"></h2>
+
+  <h3>My Courses</h3>
+
+  <div class="course-grid">
+
+    <div class="course-card">
+      <h3>Machine Learning</h3>
+      <p><strong>Code:</strong> CSE401</p>
+      <p><strong>Semester:</strong> 7</p>
+      <a href="course.html?course=ML" class="btn">View Course</a>
+    </div>
+
+    <div class="course-card">
+      <h3>Artificial Intelligence</h3>
+      <p><strong>Code:</strong> CSE301</p>
+      <p><strong>Semester:</strong> 6</p>
+      <a href="course.html?course=AI" class="btn">View Course</a>
+    </div>
+
+    <div class="course-card">
+      <h3>Database Management Systems</h3>
+      <p><strong>Code:</strong> CSE202</p>
+      <p><strong>Semester:</strong> 4</p>
+      <a href="course.html?course=DBMS" class="btn">View Course</a>
+    </div>
+
+    <div class="course-card">
+      <h3>Deep Learning</h3>
+      <p><strong>Code:</strong> CSE502</p>
+      <p><strong>Semester:</strong> PG</p>
+      <a href="course.html?course=DL" class="btn">View Course</a>
+    </div>
+
+  </div>
+</main>
+
+</div>
+
+<script src="js/auth.js"></script>
+</body>
+</html>

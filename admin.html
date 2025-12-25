@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Admin Panel</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<h2>Admin Panel</h2>
+<p class="warning">Admin upload is frontend-only demo for portfolio purpose.</p>
+
+<input type="file" id="fileInput">
+<button class="btn" onclick="upload()">Upload</button>
+
+<ul id="fileList"></ul>
+
+<script>
+function upload() {
+  const file = document.getElementById("fileInput").files[0];
+  if (file) {
+    const li = document.createElement("li");
+    li.textContent = file.name;
+    document.getElementById("fileList").appendChild(li);
+  }
+}
+</script>
+
+</body>
+</html>
