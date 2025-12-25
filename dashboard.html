@@ -1,86 +1,59 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-  <meta charset="UTF-8">
-  <title>Faculty Dashboard | Academic Portal</title>
+  <title>Student Dashboard</title>
   <link rel="stylesheet" href="css/style.css">
 </head>
-<body onload="loadDashboard()">
+<body onload="loadUser()">
 
 <div class="dashboard">
-
-  <!-- SIDEBAR -->
   <aside>
-    <h3>Faculty Panel</h3>
-    <a href="#blogs">Daily Blog</a>
-    <a href="#announcements">Announcements</a>
-    <a href="#notes">Student Notes</a>
-    <a href="#projects">Projects</a>
-    <a href="#messages">Messages</a>
+    <h3>Dashboard</h3>
+    <a href="course.html">Courses</a>
     <a href="#" onclick="logout()">Logout</a>
   </aside>
 
-  <!-- MAIN -->
   <main>
+  <h2 id="welcome"></h2>
 
-    <!-- WELCOME -->
-    <section>
-      <h2 id="welcome"></h2>
-      <p>Faculty academic dashboard for teaching & student interaction.</p>
-    </section>
+  <h3>My Courses</h3>
 
-    <!-- BLOG -->
-    <section id="blogs">
-      <h2>📘 Daily Faculty Blog</h2>
-      <textarea id="blogText" placeholder="Write today’s academic thought or lesson..." rows="4"></textarea>
-      <button class="btn" onclick="saveBlog()">Post Blog</button>
-      <div id="blogList"></div>
-    </section>
+  <div class="course-grid">
 
-    <!-- ANNOUNCEMENTS -->
-    <section id="announcements">
-      <h2>📢 Announcements</h2>
-      <input id="announcementText" placeholder="New announcement">
-      <button class="btn" onclick="addAnnouncement()">Add</button>
-      <ul id="announcementList"></ul>
-    </section>
+    <div class="course-card">
+      <h3>Machine Learning</h3>
+      <p><strong>Code:</strong> CSE401</p>
+      <p><strong>Semester:</strong> 7</p>
+      <a href="course.html?course=ML" class="btn">View Course</a>
+    </div>
 
-    <!-- STUDENT NOTES -->
-    <section id="notes">
-      <h2>📂 Student Notes Upload</h2>
+    <div class="course-card">
+      <h3>Artificial Intelligence</h3>
+      <p><strong>Code:</strong> CSE301</p>
+      <p><strong>Semester:</strong> 6</p>
+      <a href="course.html?course=AI" class="btn">View Course</a>
+    </div>
 
-      <input id="studentName" placeholder="Student Name">
-      <input type="file" id="noteFile">
-      <button class="btn" onclick="uploadNote()">Upload Note</button>
+    <div class="course-card">
+      <h3>Database Management Systems</h3>
+      <p><strong>Code:</strong> CSE202</p>
+      <p><strong>Semester:</strong> 4</p>
+      <a href="course.html?course=DBMS" class="btn">View Course</a>
+    </div>
 
-      <h3>Submitted Notes</h3>
-      <ul id="notesList"></ul>
-    </section>
+    <div class="course-card">
+      <h3>Deep Learning</h3>
+      <p><strong>Code:</strong> CSE502</p>
+      <p><strong>Semester:</strong> PG</p>
+      <a href="course.html?course=DL" class="btn">View Course</a>
+    </div>
 
-    <!-- PROJECTS -->
-    <section id="projects">
-      <h2>🧪 Faculty Projects</h2>
-      <input id="projectTitle" placeholder="Project Title">
-      <textarea id="projectDesc" placeholder="Short description"></textarea>
-      <button class="btn" onclick="addProject()">Add Project</button>
-      <ul id="projectList"></ul>
-    </section>
+  </div>
+</main>
 
-    <!-- MESSAGES -->
-    <section id="messages">
-      <h2>💬 Student Messages</h2>
-      <input id="msgName" placeholder="Student Name">
-      <textarea id="msgText" placeholder="Student query"></textarea>
-      <button class="btn" onclick="sendMessage()">Send</button>
-
-      <h3>Inbox</h3>
-      <ul id="messageList"></ul>
-    </section>
-
-  </main>
 </div>
 
 <script src="js/auth.js"></script>
-<script src="js/dashboard.js"></script>
 </body>
 </html>
+
